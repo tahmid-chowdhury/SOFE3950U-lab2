@@ -1,5 +1,10 @@
 // utility.c
-// This file will have the implementation of the commands.
+// Operating Systems - Lab 2
+// CRN 74026 - Group 9
+// Tahmid Chowdhury, 100822671
+// Suluxan Manogharan, 100823684
+// Armaghan Nasir, 100820948
+// Saieashan Sathivel, 100818528
 
 #include "myshell.h"
 #include <stdio.h>
@@ -15,24 +20,73 @@ void change_directory(char *path) {
         char cwd[1024];
 
         // Use getcwd to get the current working directory.
-        // getcwd fills the array 'cwd' with the absolute pathname of the current working directory.
-        // If the function succeeds, the cwd array contains this pathname and NULL is not returned.
         if (getcwd(cwd, sizeof(cwd)) != NULL) {
             // If successful, print the current working directory to the user
             printf("%s\n", cwd);
         } else {
             // If getcwd fails, use perror to print an error message.
-            // perror produces a message on standard error describing the last error encountered during a call to a system or library function.
             perror("getcwd() error");
         }
     } else {
         // If a path is provided, try changing the directory to the specified path using chdir
-        // chdir changes the current working directory of the calling process to the directory specified in path.
-
-        // If chdir returns a non-zero value, it indicates an error occurred (like if the directory does not exist).
         if (chdir(path) != 0) {
             // In case of an error, use perror to print the error message.
             perror("myshell");
         }
     }
 }
+
+// Function to clear the screen
+void clear_screen() {
+	// Use ANSI escape sequence to clear the screen
+	printf("\033[H\033[J");
+}
+
+// Function to list the contents of the specified directory
+void list_directory(char *path) {
+	// Check if the path argument is NULL, which implies no specific directory was provided
+	if (path == NULL) {
+		// Set path to the current directory
+		path = ".";
+	}
+	
+	// Create a buffer to store the command to list directory contents
+	char command[1024];
+	sprintf(command, "ls -l %s", path);
+	
+	// Use a system call to execute the command
+	system(command);
+}
+
+// Function to list all the environment strings
+void list_environment() {
+	// Create an external variable for the environment
+	extern char **environ;
+	
+	// Use a for loop to print each environment variable
+	for (char **env = environ; *env != NULL; env++) {
+		printf("%s\n", *env);
+	}
+}
+
+// Function to display comment on the display followed by a new line
+void display_comment(char *comment) {
+	// Print the comment to the user
+	printf("%s\n", comment);
+}
+
+// Function to display the user manual
+void display_manual() {
+	// Print the user manual to the user
+	printf("User Manual: This is a simple shell.\nAvailable commands: cd, clr, dir, environ, echo, help, pause, quit\n");
+}
+
+// Function to pause operation of the shell until 'Enter' is pressed
+void pause_operation() {
+	// Print a message telling the user to press 'Enter' to unpause operation
+	printf("Press Enter to continue...\n");
+	
+	// Use getchar to wait for Enter key
+	getchar();
+}
+

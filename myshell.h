@@ -1,5 +1,10 @@
 // myshell.h
-/* This is the header file where you include standard libraries and declare functions used across your shell program. */
+// Operating Systems - Lab 2
+// CRN 74026 - Group 9
+// Tahmid Chowdhury, 100822671
+// Suluxan Manogharan, 100823684
+// Armaghan Nasir, 100820948
+// Saieashan Sathivel, 100818528
 
 #ifndef MYSHELL_H  // Prevents double inclusion of this header file
 #define MYSHELL_H
@@ -9,7 +14,13 @@
 #include <string.h>  // String handling functions
 #include <unistd.h>  // Provides access to the POSIX operating system API
 
-// Function declaration for changing directories (cd)
+// Function declarations from utility.h
 void change_directory(char *path);
+void clear_screen();
+void list_directory(char *path);
+void list_environment();
+void display_comment(char *comment);
+void display_manual();
+void pause_operation();
 
 #endif
