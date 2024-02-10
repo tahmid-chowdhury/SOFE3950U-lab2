@@ -1,13 +1,9 @@
 # Operating Systems - Lab 2
 **CRN 74026 - Group 18**
-
-[Tahmid Chowdhury](https://github.com/tahmid-chowdhury) - 100822671
-
-[Suluxan Manogharan]() - 100823684
-
-[Armaghan Nasir](https://github.com/Armaghan180) - 100820948
-
-[Saieashan Sathivel](https://github.com/Saieashan1) - 100818528
+- [Tahmid Chowdhury](https://github.com/tahmid-chowdhury) - 100822671
+- [Suluxan Manogharan]() - 100823684
+- [Armaghan Nasir](https://github.com/Armaghan180) - 100820948
+- [Saieashan Sathivel](https://github.com/Saieashan1) - 100818528
 
 ## Introduction
 MyShell is a simple shell program for educational purposes, supporting basic command-line operations. The purpose of this README is to provide users with comprehensive instructions on how to efficiently run MyShell.
