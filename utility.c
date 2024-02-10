@@ -78,7 +78,7 @@ void display_comment(char *comment) {
 // Function to display the user manual
 void display_manual() {
 	// Print the user manual to the user
-	printf("User Manual: This is a simple shell.\nAvailable commands: cd, clr, dir, environ, echo, help, pause, quit\n");
+	printf("User Manual: This is a simple shell.\nAvailable commands: cd, clr, dir, environ, echo, help, pause, quit\nFor more information, please check the README file\n");
 }
 
 // Function to pause operation of the shell until 'Enter' is pressed
