@@ -7,6 +7,7 @@
 // Saieashan Sathivel, 100818528
 
 #include "myshell.h"
+#include <sys/wait.h>
 
 // Function to execute the entered command
 void execute_command(char *input) {
