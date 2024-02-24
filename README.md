@@ -1,5 +1,5 @@
 # Operating Systems - Lab 2
-**CRN 74026 - Group 18**
+**CRN 74026 - Group 9**
 - [Tahmid Chowdhury](https://github.com/tahmid-chowdhury) - 100822671
 - [Suluxan Manogharan](https://github.com/Suluseahawks) - 100823684
 - [Armaghan Nasir](https://github.com/Armaghan180) - 100820948
